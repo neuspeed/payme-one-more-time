@@ -110,7 +110,7 @@ async def get_payment(
         raise HTTPException(status_code=404,detail="Payment bot found")
     return payment_schema.PaymentDetailResponse(
         payment_id=str(payment_id),
-        amount=str(existing_payment),
+        amount=str(existing_payment.amount),
         currency=existing_payment.currency,
         description=existing_payment.description,
         meta=existing_payment.meta,
