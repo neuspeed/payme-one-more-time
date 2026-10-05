@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+sqlalchemy[asyncio] > 2.0
+faststream[rabbit]
+faststream[cli]
+alembic
+python-dotenv
+httpx
+asyncpg
+psycopg2-binary 
