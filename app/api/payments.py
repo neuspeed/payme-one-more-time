@@ -31,7 +31,7 @@ def get_idempotency_key(idemptonecy_key: Annotated[str, Header(alias="Idempotenc
 
     return key
 
-@router.post("/", response_model=payment_schema.PaymentCreatedResponse, status_code=202)
+@router.post("", response_model=payment_schema.PaymentCreatedResponse, status_code=202)
 async def create_payments(
     payment: payment_schema.PaymentCreate,
     idempotency_key: str =  Depends(get_idempotency_key),

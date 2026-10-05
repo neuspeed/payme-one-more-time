@@ -20,7 +20,8 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Async Payment Service",
     dependencies=[Depends(security.verify_api_key)],
-    lifespan=lifespan
+    lifespan=lifespan,
+    openapi_prefix="/api/v1"
 )
 
 
